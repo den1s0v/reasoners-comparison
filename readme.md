@@ -3,13 +3,13 @@
 
 Inference engines (reasoners) considered by this study include the following:
 
-1. Pellet2 (SWRL) \(also provides a plugin for Protege) is the only OWL reasoner supporting SWRL built-ins (arithmetics, etc.).
-2.  Apache Jena - RDF/OWL framework for Java having custom production rule syntax.
-3.  SWI-Prolog[10] with the semweb (rdf11) package for handling RDF data alongside prolog native predicates representing the domain rules.
+1. Pellet2 (`SWRL`) \(also provides a plugin for Protege) is the only `OWL` reasoner supporting SWRL built-ins (arithmetics, etc.).
+2.  Apache `Jena` - RDF/OWL framework for Java having custom production rule syntax.
+3.  SWI-`Prolog` with the semweb (rdf11) package for handling RDF data alongside prolog native predicates representing the domain rules.
 4.  Apache Jena ARQ - a `SPARQL` query processor capable running batches of SPARQL Update queries imitating production rules.
 5.  Closed World Machine [seems impractical as not supported since 2008] - ancient reasoner written in Python 2 for RDF with its own rule syntax supporting some useful built-ins.
-6. Clingo - Answer Set Programming (ASP) tool that combines `gringo` grounder and `clasp` solver \(handles data as ASP facts, no native support for RDF).
-7. DLV [seems impractical as not supported since 2012] - another  ASP  solver  using  a  dialect  of  ASP  slightly  different  from Clingo’s one.
+6. Clingo - Answer Set Programming (`ASP`) tool that combines `gringo` grounder and `clasp` solver \(handles data as ASP facts, no native support for RDF).
+7. DLV [seems impractical as not supported since 2012] - another  ASP  solver  using  a  dialect  of  ASP  slightly  different  from Clingoâ€™s one.
 
 
 |        Feature        |    SWRL    | Jena Rules | SWI-Prolog + rdf11 |  SPARQL Update  | ASP (Clingo) |
@@ -26,7 +26,7 @@ Inference engines (reasoners) considered by this study include the following:
 | Aggregates            | No         | No         | User-defined       | Built-in        | Built-in     |
 | Integrity constraints | No         | No         | No                 | No              | Yes          |
 | Check transitivity    | Assert all | Assert all | Recursion          | Property path   | Assert all   |
-| Custom builtins       | Yes – Java | Yes – Java | Yes – Prolog       | No              | Yes – Lua    |
+| Custom builtins       | Yes â€“ Java | Yes â€“ Java | Yes â€“ Prolog       | No              | Yes â€“ Lua    |
 | Prioritize rules      | No         | No         | Ordering only      | Ordering only   | No           |
 
 
@@ -34,3 +34,8 @@ Inference engines (reasoners) considered by this study include the following:
 ## Performance Evaluation Results
 
 
+#### Traces domain, 3 datasets
+
+Wall run time | Exclusive reasoning time
+--- | ---
+![Traces domain, Wall run time](blob/main/img/trace/Wall_time_(s)_averaged_on_all_traces.svg) | ![Traces domain, Exclusive reasoning time](blob/main/img/trace/Exclusive_reasoning_time_(s)_averaged_on_all_traces.svg)
